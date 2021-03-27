@@ -1,0 +1,28 @@
+﻿<Window x:Class="Rewind.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Rewind"
+        mc:Ignorable="d"
+        Title="Rewind - Immediate Virus Counter Measures" Height="466" Width="803" Margin="0,0,0,0">
+    <Grid Margin="5,5,5,5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="530*"/>
+            <ColumnDefinition Width="273*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Start Rewind" HorizontalAlignment="Left" Margin="134,94,0,0" VerticalAlignment="Top" Height="51" Width="124" Click="Start_Rewind" RenderTransformOrigin="0.854,0.373" Grid.Column="1"/>
+        <TextBox x:Name="TextOutput" HorizontalAlignment="Left" Margin="10,158,0,0" Text="" TextWrapping="Wrap" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" VerticalAlignment="Top" Height="272" Width="773" Grid.ColumnSpan="2"/>
+        <Label Content="Log of counter measures" HorizontalAlignment="Left" Margin="10,132,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="12,10,0,0" Text="Rewind" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Width="780" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="ComboTimeFrame" HorizontalAlignment="Left" Margin="9,120,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1">
+            <ComboBoxItem>1 minute</ComboBoxItem>
+            <ComboBoxItem IsSelected="True">2 minutes</ComboBoxItem>
+            <ComboBoxItem>5 minutes</ComboBoxItem>
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="9,99,0,0" Text="Undo the last" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
+
+    </Grid>
+</Window>
+    
+    
