@@ -28,7 +28,7 @@ namespace Rewind
 
         private void Start_Rewind(object sender, RoutedEventArgs e)
         {
-            TextOutput.Text += String.Format("Sarting counter measures ...\n");
+            TextOutput.Text += String.Format("Starting countermeasures ...\n");
 
             ComboBoxItem typeItem = (ComboBoxItem)ComboTimeFrame.SelectedItem;
             var TimeFrame = typeItem.Content.ToString();
@@ -52,7 +52,7 @@ namespace Rewind
                     {
                         if (!exceptions.Any(proc.ProcessName.Contains)) {
                             TextOutput.Text += String.Format("Killing process: {0} ID: {1} Started: {2}\n", proc.ProcessName, proc.Id, proc.StartTime);
-                            //proc.Kill();
+                            //proc.Kill(True);
                             numberKilled += 1;
                         }
                     }
