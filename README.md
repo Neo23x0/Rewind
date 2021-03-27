@@ -35,6 +35,19 @@ By providing the user with a panic button, we can try to interfere and try to st
 
 ## The Side Effects
 
+There are obvious side effects of these counter measures. Since it kills all processes accessible within the user context, removes files and registry keys, it could lead to the following situation:
+
+- programs started within the selected time frame get killed (work is lost)
+- legitimate files written to disk get removed
+- program installations executed within the selected time frame may be broken
+
+**BUT:**
+
+1. Since the time frame is rather short, we limit the effect of the measures to the most recent moments. It is unlikely that someone notices the suspicious activity and then starts to work on a Word document of Excel spreadsheet before pressing the panic button. 
+2. We limit the file actions to certain file types often used by second stages or dropped by malicious documents. 
+3. We limit the counter measures on the Registry to certain keys that are frequently used for persistence
+
+## The Limitation
 
 ## Features
 
