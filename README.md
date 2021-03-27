@@ -17,6 +17,25 @@ Rewind tries to kill or undo changes that occured recently by ending all recentl
 
 This generic appreach doesn't recognize a specific type of threat but radically removes every process, file or registry key created within a very short time frame after a potential infection. 
 
+## The Effect
+
+During an infection the following things happen:
+
+- new processes spawn
+- executed code downloads further stages
+- files are written to (temporary) folders on disk
+- registry values are written to persist the threat
+
+By providing the user with a panic button, we can try to interfere and try to stop some of the malicious activity before it is able to cause more damage in form of:
+
+- disk encryption (Ransomware)
+- propagation (Worms)
+- dump and steal credentials (Credential Stealer)
+- load further stages (Beacons)
+
+## The Side Effects
+
+
 ## Features
 
 - Kills all processes started within the last X minutes and accessible from the current user context
