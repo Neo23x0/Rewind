@@ -49,6 +49,10 @@ There are obvious side effects of these counter measures. Since it kills all pro
 
 ## The Limitation
 
+All activity by Rewind is limited to the user's context. It is unable to kill important systems processes spawned within the targeted time frame. 
+
+It is therefore unable to kill processes that used local privilege escalation vulnerabilities to spawn processes in a privileged context. 
+
 ## Features
 
 - Kills all processes started within the last X minutes and accessible from the current user context
@@ -60,3 +64,7 @@ Not yet implemented in the POC
 ## Screenshots
 
 ![Proof-of-Concept](https://raw.githubusercontent.com/Neo23x0/Rewind/master/screens/poc1.png)
+
+## Further Ideas
+
+- I would combine it with a "ping" (webhook, email, ticket etc.) to a local SOC or MDR provider, so that users can actively point out suspicious activity on their desktops to the analysts and they can search for threats on that endpoint within the indicated time frame (why not include the end user in the threat hunting activity?)
