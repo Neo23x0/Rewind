@@ -51,8 +51,14 @@ namespace Rewind
                     if (proc.StartTime.AddMinutes(NumMinutes) > DateTime.Now)
                     {
                         if (!exceptions.Any(proc.ProcessName.Contains)) {
-                            TextOutput.Text += String.Format("Killing process: {0} ID: {1} Started: {2}\n", proc.ProcessName, proc.Id, proc.StartTime);
-                            //proc.Kill(True);
+                            proc.Kill(true);
+                            if (proc.HasExited)
+                            {
+                                TextOutput.Text += String.Format("Killing process: {0} ID: {1} Started: {2}\n", proc.ProcessName, proc.Id, proc.StartTime);
+                            } else
+                            {
+                                TextOutput.Text += String.Format("Killing process FAILED: {0} ID: {1} Started: {2}\n", proc.ProcessName, proc.Id, proc.StartTime);
+                            }
                             numberKilled += 1;
                         }
                     }
