@@ -11,7 +11,7 @@ Users that have opened a weaponized document are often aware that something is w
 - another program gets started without their interaction (e.g. browser window)
 - the attached document doesn't open at all (.docx.exe extensions)
 
-We can use the moments of realization to prevent further damage caused by malicious code by providing an emergency button that users can press when they believe that sh++ hit the fan. 
+We can use these moments of realization to prevent further damage caused by malicious code by providing an emergency button that users can press when they believe that sh++ just hit the fan. 
 
 Rewind tries to kill or undo changes that occured recently by ending all recently spawned processes and removing all recently created files of certain types, as well as removing recently modified registry keys used for persistence (e.g. RUN key entries) regardless of their actual values. 
 
